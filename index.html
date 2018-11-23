@@ -13,10 +13,32 @@
 
     <script type="text/babel">
       class App extends React.Component {
+          state={
+              name: 'Jim',
+              age: 98
+          }
+          handleClick=e=>{
+            //  console.log(e.target)
+              this.setState({
+                  name:'Blodgett',
+                  age: 135
+              })
+              console.log(this.state)
+          }
+          handleMouseOver=e=>{
+              console.log(e.target, e.pageX)
+          }
+          handleCopy=e=>{
+              console.log('You tried to copy me, stop that!')
+          }
         render(){
             return (
                 <div className="app-content">
                    <h1>Hellloooo Careerdevs</h1>
+                   <p>My name is: {this.state.name} and I am {this.state.age}</p>
+                   <button onClick={this.handleClick}>Click Me</button>
+                   <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+                   <p onCopy={this.handleCopy}>I can tell if you are trying to copy me</p>
                 </div>
             )
         }
