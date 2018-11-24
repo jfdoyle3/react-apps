@@ -15,7 +15,7 @@
       class App extends React.Component {
           state={
               name: 'Jim',
-              age: 98
+              age: 25
           }
           handleClick=e=>{
             //  console.log(e.target)
@@ -31,10 +31,24 @@
           handleCopy=e=>{
               console.log('You tried to copy me, stop that!')
           }
-        render(){
+          handleChange=e=>{
+              this.setState({
+                name: e.target.value
+              })
+          }
+          handleSubmit=e=>{
+              e.preventDefault();
+              console.log('Form submitted',this.state.name)
+          }
+          render(){
             return (
                 <div className="app-content">
                    <h1>Hellloooo Careerdevs</h1>
+                   <h2>{this.state.name} is a Careerdev Student</h2>
+                   <form onSubmit={this.handleSubmit}>
+                     <input type='text' onChange={this.handleChange}/>
+                     <button>Submit</button>
+                   </form>
                    <p>My name is: {this.state.name} and I am {this.state.age}</p>
                    <button onClick={this.handleClick}>Click Me</button>
                    <button onMouseOver={this.handleMouseOver}>Hover Me</button>
