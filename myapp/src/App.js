@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Classmates from './classmates';
+import Students from './Students';
 
 class App extends Component {
   state={
-    classmates: [
+    students: [
       {name:'jim', group: 'intermediate', time:'evening', id: 1},
       {name:'juan', group: 'advanced', time:'evening', id: 2},
       {name:'Leah', group: 'advanced', time:'evening', id: 3},
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
        <h1>Helllooo CareerDevs</h1>
        <p>Welcome :)</p>
-       <Classmates classmates={this.classmates} />
+       <Students students={this.state.students} />
       </div>
     );
   }
