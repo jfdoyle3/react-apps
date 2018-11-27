@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Students = ({students}) => {
-    // This renders out the template directly. the other 2 below output the data through a varible.
-    // using a varible allows the the logic and template to be cleaner code.
+    // This renders out the return template directly. the other 2 below output the data through a varible.
+    // using a varible allows the logic and return template to be cleaner code.
        return(
            <div className="student-list">
                {
