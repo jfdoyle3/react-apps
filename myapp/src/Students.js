@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Students = ({students}) => {
+const Students = ({students, deleteStudent}) => {
     // This renders out the return template directly. the other 2 below output the data through a varible.
     // using a varible allows the logic and return template to be cleaner code.
        return(
@@ -12,6 +12,7 @@ const Students = ({students}) => {
                            <div>Name: {student.name}</div>
                            <div>Group: {student.group}</div>
                            <div>Time: {student.time}</div>
+                           <button onClick={()=>deleteStudent(student.id)}>Delete Student</button>
                         </div>
                        ): null
                    })

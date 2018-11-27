@@ -17,12 +17,20 @@ class App extends Component {
       students: students
     })
   }
+  deleteStudent=(id)=>{
+      let students=this.state.students.filter(student =>{
+        return student.id != id
+            })
+        this.setState=({
+
+        })
+  }
   render() {
     return (
       <div className="App">
        <h1>Helllooo CareerDevs</h1>
        <p>Welcome :)</p>
-       <Students students={this.state.students} />
+       <Students deleteStudent={this.deleteStudent} students={this.state.students} />
        <AddStudent addStudent={this.addStudent}/>
       </div>
     );
