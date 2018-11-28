@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Students = ({students, deleteStudent}) => {
     // This renders out the return template directly. the other 2 below output the data through a varible.
     // using a varible allows the logic and return template to be cleaner code.
