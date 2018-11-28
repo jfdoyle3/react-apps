@@ -19,10 +19,10 @@ class App extends Component {
   }
   deleteStudent=(id)=>{
       let students=this.state.students.filter(student =>{
-        return student.id != id
+        return student.id !== id
             })
-        this.setState=({
-
+        this.setState({
+          students: students
         })
   }
   render() {
