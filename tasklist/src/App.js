@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Todos from './Todos'
+import Tasks from './Tasks'
 
 
 class App extends Component {
   state={
-    todos:[
+    tasks:[
       {id: 1, content: 'buy beer'},
       {id: 2, content: 'play game'}
     ]
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="center blue-text">Todo's</h1>
-        <Todos todos={this.state.todos} />
+        <Tasks tasks={this.state.tasks} />
       </div>
     );
   }
