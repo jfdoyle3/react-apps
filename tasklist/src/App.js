@@ -5,7 +5,7 @@ import Tasks from './Tasks'
 class App extends Component {
   state={
     tasks:[
-      {id: 1, content: 'buy beer'},
+      {id: 1, content: 'pseudo code'},
       {id: 2, content: 'start coding'}
     ]
   }
