@@ -15,8 +15,8 @@ const Tasks = ({tasks}) =>{
     )
 
     return (
-        <div className="tasks collections">
-
+        <div className="tasks collection">
+            {taskList}
         </div>
     )
 }

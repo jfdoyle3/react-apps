@@ -6,13 +6,13 @@ class App extends Component {
   state={
     tasks:[
       {id: 1, content: 'buy beer'},
-      {id: 2, content: 'play game'}
+      {id: 2, content: 'start coding'}
     ]
   }
   render() {
     return (
       <div className="App">
-        <h1 className="center blue-text">Todo's</h1>
+        <h1 className="center blue-text">Tasks</h1>
         <Tasks tasks={this.state.tasks} />
       </div>
     );
