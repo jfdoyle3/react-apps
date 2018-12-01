@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tasks from './Tasks'
+import AddTask from './AddTask'
 
 
 class App extends Component {
@@ -17,11 +18,19 @@ class App extends Component {
       tasks
     })
   }
+  addTask=(task)=>{
+    task.id=Math.random()
+    let tasks=[...this.state.tasks, task]
+    this.setState({
+      tasks
+    })
+  }
   render() {
     return (
       <div className="task-app container">
         <h1 className="center blue-text">Tasks</h1>
         <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask}/>
+        <AddTask addTask={this.addTask} />
       </div>
     );
   }
